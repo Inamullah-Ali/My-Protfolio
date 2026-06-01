@@ -4,36 +4,47 @@ import { useInView } from './hooks/useInView';
 
 const experiences = [
   {
-    title: 'Senior Full Stack Developer',
-    company: 'Tech Solutions Inc.',
-    period: '2022 - Present',
-    description: 'Leading development of enterprise web applications using React, Node.js, and AWS. Mentoring junior developers and architecting scalable solutions.',
+    title: 'Fresher / Web Developer',
+    company: 'Self-Learning & Projects',
+    period: '2026 - Present',
+    description: 'Building modern web applications using React, Node.js, Next.js, TypeScript, and Tailwind CSS. Focused on learning, creating projects, and exploring real-world application development.',
     highlights: [
-      'Reduced application load time by 40% through optimization',
-      'Led migration to microservices architecture',
-      'Implemented CI/CD pipeline reducing deployment time by 60%'
+      'Developed personal portfolio website using React and Tailwind CSS',
+      'Built small projects with REST APIs and Firebase integration',
+      'Implemented responsive and interactive UI components'
     ]
   },
   {
-    title: 'Full Stack Developer',
-    company: 'Digital Innovations Ltd.',
-    period: '2020 - 2022',
-    description: 'Developed and maintained multiple client projects using modern web technologies. Collaborated with design teams to create pixel-perfect implementations.',
+    title: 'Project: TaskMaster Admin Panel',
+    company: 'Personal Project',
+    period: '2026',
+    description: 'A modern admin dashboard to manage tasks, users, and analytics. Built with React, TypeScript, Tailwind CSS, and connected to a Firebase backend.',
     highlights: [
-      'Built 15+ responsive web applications',
-      'Implemented real-time features using WebSockets',
-      'Improved code quality through comprehensive testing'
+      'Implemented role-based access and authentication',
+      'Connected UI with Firebase Firestore for real-time data',
+      'Designed interactive charts and task management interface'
     ]
   },
   {
-    title: 'Frontend Developer',
-    company: 'StartUp Studios',
-    period: '2018 - 2020',
-    description: 'Created responsive user interfaces and interactive web experiences. Worked closely with UX designers to implement engaging user experiences.',
+    title: 'Project: To-Do App',
+    company: 'Personal Project',
+    period: '2026',
+    description: 'A full-stack To-Do application with Firebase backend. Focused on CRUD operations and real-time updates.',
     highlights: [
-      'Developed reusable component library',
-      'Improved website performance scores to 95+',
-      'Collaborated with cross-functional teams'
+      'Implemented authentication with Firebase Auth',
+      'Real-time updates using Firestore',
+      'Clean and reusable React components'
+    ]
+  },
+  {
+    title: 'Project: Portfolio Website',
+    company: 'Personal Project',
+    period: '2026',
+    description: 'Showcasing skills, projects, and experience. Built using Next.js, TypeScript, and Tailwind CSS.',
+    highlights: [
+      'Implemented dark & light theme toggle',
+      'Integrated animations for interactive UX',
+      'Optimized performance and SEO'
     ]
   }
 ];

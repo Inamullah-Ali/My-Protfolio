@@ -24,9 +24,9 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="mb-6"
+              className="mb-6 font-bold"
             >
-              John Developer
+             Inam-Ullah Ali
             </motion.h1>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -78,9 +78,9 @@ export function Hero() {
               <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-accent/20 rounded-full blur-2xl dark:from-primary/30 dark:to-primary/10"></div>
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-border bg-muted dark:border-primary/30 dark:shadow-[0_0_60px_rgba(124,58,237,0.3)]">
                 <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  <svg className="w-32 h-32" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                  </svg>
+                  {/* <svg className="w-32 h-32" fill="currentColor" viewBox="0 0 20 20">
+                  </svg> */}
+                  <img src="/images/me.jpg" alt="pic"  />
                 </div>
               </div>
             </div>

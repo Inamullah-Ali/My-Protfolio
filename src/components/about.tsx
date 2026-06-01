@@ -20,9 +20,7 @@ export function About() {
             <div>
               <h3 className="mb-4">Hello! I'm John Developer</h3>
               <p className="text-muted-foreground mb-4">
-                I'm a passionate full-stack developer with over 5 years of experience building
-                modern web applications. I specialize in React, TypeScript, and Node.js, creating
-                scalable and user-friendly solutions.
+ I'm a passionate full-stack developer, building modern web applications. I specialize in React, TypeScript, and Node.js, creating scalable and user-friendly solutions.
               </p>
               <p className="text-muted-foreground mb-4">
                 My journey in web development started with a curiosity about how things work on the
@@ -39,7 +37,7 @@ export function About() {
               <div className="p-6 bg-card rounded-lg border border-border shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h4 className="mb-3">Core Technologies</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['React', 'TypeScript', 'Next.js', 'Node.js', 'Tailwind CSS', 'Firebase'].map((tech) => (
+                  {['React', 'TypeScript', 'Next.js', 'Node.js', 'Tailwind CSS', 'Firebase','AppWrite'].map((tech) => (
                     <span
                       key={tech}
                       className="px-3 py-1 bg-accent text-accent-foreground rounded-full"
@@ -53,7 +51,7 @@ export function About() {
               <div className="p-6 bg-card rounded-lg border border-border shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h4 className="mb-3">Other Skills</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['Git', 'REST APIs', 'GraphQL', 'PostgreSQL', 'Docker', 'AWS'].map((skill) => (
+                  {['Git', 'REST APIs'].map((skill) => (
                     <span
                       key={skill}
                       className="px-3 py-1 bg-accent text-accent-foreground rounded-full"

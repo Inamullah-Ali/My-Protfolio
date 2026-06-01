@@ -19,38 +19,6 @@ const projects = [
     demo: 'https://demo.com',
     image: 'bg-gradient-to-br from-blue-500 to-cyan-500'
   },
-  {
-    name: 'Social Media Dashboard',
-    description: 'Analytics dashboard for social media metrics with interactive charts and real-time data visualization.',
-    technologies: ['React', 'TypeScript', 'Recharts', 'Firebase'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
-    image: 'bg-gradient-to-br from-green-500 to-teal-500'
-  },
-  {
-    name: 'Weather Forecast App',
-    description: 'Beautiful weather application with 7-day forecast, location search, and interactive weather maps.',
-    technologies: ['React', 'OpenWeather API', 'CSS'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
-    image: 'bg-gradient-to-br from-orange-500 to-red-500'
-  },
-  {
-    name: 'Portfolio CMS',
-    description: 'Content management system for portfolio websites with drag-and-drop builder and real-time preview.',
-    technologies: ['Next.js', 'PostgreSQL', 'Prisma', 'Tailwind'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
-    image: 'bg-gradient-to-br from-indigo-500 to-purple-500'
-  },
-  {
-    name: 'Fitness Tracker',
-    description: 'Mobile-responsive fitness tracking app with workout logs, progress charts, and goal setting features.',
-    technologies: ['React', 'TypeScript', 'Chart.js', 'Firebase'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
-    image: 'bg-gradient-to-br from-yellow-500 to-orange-500'
-  }
 ];
 
 export function Projects() {

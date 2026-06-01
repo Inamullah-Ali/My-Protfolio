@@ -1,6 +1,6 @@
+import { ThemeSwitch } from "@/components/themeswitcher";
 import { About } from "../components/about";
 import { Contact } from "../components/contact";
-import { DarkModeToggle } from "../components/DarkModeToggle";
 import { Experience } from "../components/Experience";
 import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
@@ -12,7 +12,7 @@ export default function Home() {
     return(
     <div className="min-h-screen">
       <Navbar />
-      <DarkModeToggle />
+      <ThemeSwitch />
       <Hero />
       <About />
       <Skills />
