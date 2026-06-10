@@ -24,7 +24,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="mb-6 font-bold"
+              className="mb-6 font-bold text-5xl"
             >
              Inam-Ullah Ali
             </motion.h1>

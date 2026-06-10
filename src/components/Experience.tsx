@@ -74,8 +74,8 @@ export function Experience() {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: index * 0.2, duration: 0.5 }}
-                  className={`relative mb-12 ${
-                    index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8 md:ml-auto'
+                  className={`relative mb-8 ${
+                    index % 2 === 0 ? 'md:pr-8 md:text-left' : 'md:pl-8 md:ml-auto'
                   } md:w-1/2`}
                 >
                   <div className="absolute left-0 md:left-auto md:-right-5 w-10 h-10 bg-primary rounded-full flex items-center justify-center border-4 border-background md:transform md:translate-x-1/2 dark:shadow-[0_0_20px_rgba(124,58,237,0.6)]">

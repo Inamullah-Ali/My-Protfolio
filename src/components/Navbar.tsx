@@ -1,23 +1,46 @@
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { href } from "react-router";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("#home");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      },
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
   ];
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false);
     }
   };
@@ -28,7 +51,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <motion.a
             href="#home"
-            onClick={(e) => handleClick(e, '#home')}
+            onClick={(e) => handleClick(e, "#home")}
             className="text-foreground hover:text-primary transition-colors duration-300"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -43,13 +66,22 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleClick(e, link.href)}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300 relative group dark:hover:drop-shadow-[0_0_8px_rgba(124,58,237,0.5)]"
+                className={`relative group transition-colors duration-300
+                  ${
+                    activeSection === link.href
+                      ? "text-purple-500 font-semibold"
+                      : "text-foreground/80 hover:text-primary"
+                  }
+                  `}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full dark:shadow-[0_0_10px_rgba(124,58,237,0.8)]"></span>
+                <span
+                  className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 bg-purple-500
+                    ${activeSection === link.href ? "w-full" : "w-0"}`}
+                />
               </motion.a>
             ))}
           </div>
@@ -60,7 +92,11 @@ export function Navbar() {
               className="text-foreground hover:text-primary transition-colors p-2"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -70,7 +106,7 @@ export function Navbar() {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden overflow-hidden bg-background/95 backdrop-blur-lg border-b border-border"

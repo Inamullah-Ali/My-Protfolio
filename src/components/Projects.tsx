@@ -4,20 +4,28 @@ import { useInView } from './hooks/useInView';
 
 const projects = [
   {
-    name: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce platform with product management, cart functionality, and secure checkout process.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    github: 'https://github.com/Inamullah-Ali/Protfolio',
-    demo: 'https://demo.com',
-    image: 'bg-gradient-to-br from-purple-500 to-pink-500'
+    name: 'Shop Admin Dashboard',
+    description: 'A collaborative task management application with real-time updates, team collaboration, and progress tracking.',
+    technologies: ['React Vite+','Next.js', 'TypeScript', 'Firebase', 'Tailwind','Appwrite'],
+    github: 'https://github.com/Inamullah-Ali/ShopManagement',
+    demo: 'https://shop-management-kappa.vercel.app/',
+    image: '/images/project-2.png',
   },
   {
-    name: 'Task Management App',
+    name: 'HRMS Mobile App',
     description: 'A collaborative task management application with real-time updates, team collaboration, and progress tracking.',
-    technologies: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
-    image: 'bg-gradient-to-br from-blue-500 to-cyan-500'
+    technologies: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind','Appwrite'],
+    github: 'https://github.com/Inamullah-Ali/HRMS-Mobile-App.git',
+    demo: 'https://github.com/Inamullah-Ali/HRMS-Mobile-App/releases/latest',
+    image: '/images/App_HRMS/home.jpg',
+  },
+  {
+    name: 'HRMS Admin Pannel Dashboard',
+    description: 'A collaborative task management application with real-time updates, team collaboration, and progress tracking.',
+    technologies: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind','Appwrite'],
+    github: 'https://github.com/Inamullah-Ali/Admin-Pannel',
+    demo: 'https://github.com/Inamullah-Ali/HRMS-Mobile-App/releases/latest',
+    image: '/images/App_HRMS/home.jpg',
   },
 ];
 
@@ -45,7 +53,9 @@ export function Projects() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="bg-card border border-border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group dark:hover:shadow-[0_20px_50px_rgba(124,58,237,0.2)] dark:hover:border-primary/40"
               >
-                <div className={`h-48 ${project.image} group-hover:scale-105 transition-transform duration-300`}></div>
+                <div className={`h-58 group-hover:scale-105 transition-transform duration-300`}>
+                  <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
+                </div>
                 <div className="p-6">
                   <h3 className="mb-3">{project.name}</h3>
                   <p className="text-muted-foreground mb-4">{project.description}</p>
@@ -78,6 +88,15 @@ export function Projects() {
                       <ExternalLink className="w-5 h-5" />
                       Live Demo
                     </a>
+                    {/* <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors dark:hover:text-primary"
+                    >
+                      <Download className="w-5 h-5" />
+                      Download APK
+                    </a> */}
                   </div>
                 </div>
               </motion.div>
