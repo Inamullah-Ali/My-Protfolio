@@ -1,4 +1,4 @@
-import { ThemeSwitch } from "@/components/themeswitcher";
+import { ThemeSwitch } from "../components/themeswitcher";
 import { About } from "../components/about";
 import { Contact } from "../components/contact";
 import { Experience } from "../components/Experience";
