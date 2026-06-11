@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-muted-foreground text-center md:text-left">
-            © {currentYear} John Developer. All rights reserved.
+            © {currentYear} © 2026 AnamullahAli.dev Crafted with React & TypeScript.
           </p>
 
           <div className="flex items-center gap-6">
