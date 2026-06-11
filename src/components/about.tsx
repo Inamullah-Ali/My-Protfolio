@@ -18,7 +18,7 @@ export function About() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="mb-4">Hello! I'm John Developer</h3>
+              <h3 className="mb-4">Hello! I'm  Anamullah Ali Full-Stack Developer</h3>
               <p className="text-muted-foreground mb-4">
  I'm a passionate full-stack developer, building modern web applications. I specialize in React, TypeScript, and Node.js, creating scalable and user-friendly solutions.
               </p>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import DownloadCV from "./downloadcv";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,16 +38,18 @@ export function Navbar() {
     href: string,
   ) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-    }
+    setIsOpen(false);
+    setTimeout(() => {
+      document.querySelector(href)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 300);
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border dark:shadow-[0_4px_20px_rgba(124,58,237,0.1)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.a
             href="#home"
@@ -83,6 +86,7 @@ export function Navbar() {
                 />
               </motion.a>
             ))}
+            <DownloadCV />
           </div>
 
           <div className="md:hidden">
@@ -121,6 +125,9 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
+              <div className="px-4 py-2">
+                <DownloadCV />
+              </div>
             </div>
           </motion.div>
         )}

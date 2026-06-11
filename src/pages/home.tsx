@@ -10,7 +10,7 @@ import { Skills } from "../components/Skills";
 
 export default function Home() {
     return(
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full">
       <Navbar />
       <ThemeSwitch />
       <Hero />

@@ -1,3 +1,27 @@
+// import { Moon, Sun } from "lucide-react";
+// import { useTheme } from "./theme-provider";
+// export function ThemeSwitch() {
+//   const { resolvedTheme, setTheme } = useTheme();
+
+//   const isDark = resolvedTheme === "dark";
+
+//   function toggleTheme() {
+//     setTheme(isDark ? "light" : "dark");
+//   }
+//   return (
+//     <button
+//       onClick={toggleTheme}
+//       className="fixed top-20 right-6 z-50 p-3 rounded-full bg-card/80 backdrop-blur-sm border border-border hover:bg-accent transition-all duration-300 shadow-lg dark:border-primary/40 dark:shadow-[0_0_20px_rgba(124,58,237,0.3)] dark:hover:shadow-[0_0_30px_rgba(124,58,237,0.5)]"
+//       aria-label="Toggle dark mode"
+//     >
+//       {isDark ? (
+//         <Sun className="w-5 h-5 text-foreground" />
+//       ) : (
+//         <Moon className="w-5 h-5 text-foreground" />
+//       )}
+//     </button>
+//   );
+// }
 
 
 
@@ -15,17 +39,19 @@ export function ThemeSwitch() {
     setTheme(isDark ? "light" : "dark");
   }
   return (
-    <div className="w-10 h-10 flex items-center space-x-2 top-20 right-6 z-50 cursor-pointer bg-card/80 rounded-full backdrop-blur-sm border border-border hover:bg-accent transition-all duration-300 shadow-lg dark:border-primary/40 dark:shadow-[0_0_20px_rgba(124,58,237,0.3)] dark:hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] fixed">
+    <div className="flex items-center top-20 right-4 z-50 cursor-pointer bg-card/80 rounded-full backdrop-blur-sm border border-border transition-all duration-300 shadow-lg dark:border-primary/40 dark:shadow-[0_0_20px_rgba(124,58,237,0.3)] dark:hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] fixed">
+
 <Button
   onClick={toggleTheme}
   size="icon"
-  className="w-10 h-10 relative cursor-pointer flex items-center justify-center overflow-hidden bg-transparent border-none p-0"
+  className="w-10 h-10 relative cursor-pointer flex items-center justify-center overflow-hidden bg-transparent hover:bg-transparent border-none p-0 rounded-full"
 >
   <IconSunFilled
     className={`
       text-black hover:text-gray-200
       absolute left-1/2 -translate-x-1/2 -translate-y-1/2
-      h-5 w-5 transition-opacity duration-500
+      h-5 w-5
+      transition-transform transition-opacity duration-500
       ${isDark ? "-translate-y-7.5 scale-90 opacity-0" : "translate-y-0 scale-100 opacity-100"}
     `}
   />
@@ -34,7 +60,8 @@ export function ThemeSwitch() {
     className={`
       text-white hover:text-gray-200
       absolute left-1/2 -translate-x-1/2 -translate-y-1/2
-      h-5 w-5 transition-opacity duration-500 delay-100
+      h-5 w-5
+      transition-transform transition-opacity duration-500 delay-100
       ${isDark ? "translate-y-0 scale-100 opacity-100" : "translate-y-7.5 scale-90 opacity-0"}
     `}
   />

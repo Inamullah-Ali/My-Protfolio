@@ -64,8 +64,8 @@ export function Experience() {
           <h2 className="text-center mb-4">Work Experience</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-12 rounded-full dark:shadow-[0_0_20px_rgba(124,58,237,0.6)]"></div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
+          <div className="max-w-4xl mx-auto overflow-hidden">
+            <div className="relative overflow-hidden">
               <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-border"></div>
 
               {experiences.map((exp, index) => (
@@ -78,7 +78,12 @@ export function Experience() {
                     index % 2 === 0 ? 'md:pr-8 md:text-left' : 'md:pl-8 md:ml-auto'
                   } md:w-1/2`}
                 >
-                  <div className="absolute left-0 md:left-auto md:-right-5 w-10 h-10 bg-primary rounded-full flex items-center justify-center border-4 border-background md:transform md:translate-x-1/2 dark:shadow-[0_0_20px_rgba(124,58,237,0.6)]">
+                  <div className={`absolute left-0 w-10 h-10 bg-primary rounded-full flex items-center justify-center border-4 border-background dark:shadow-[0_0_20px_rgba(124,58,237,0.6)] ${
+                    index % 2 === 0
+                      ? 'md:left-auto md:right-0 md:translate-x-1/2'
+                      : 'md:-translate-x-1/2'
+                  }`}
+                  >
                     <Briefcase className="w-5 h-5 text-primary-foreground" />
                   </div>
 

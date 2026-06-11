@@ -34,7 +34,7 @@ export function Hero() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-muted-foreground mb-6"
             >
-              Full Stack Developer & UI/UX Enthusiast
+              Full Stack Developer
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
