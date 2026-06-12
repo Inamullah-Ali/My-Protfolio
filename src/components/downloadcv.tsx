@@ -9,7 +9,7 @@ export default function DownloadCV() {
       className="flex items-center gap-2 text-foreground/80 hover:text-primary"
     >
       <Download size={18} />
-      <span>Download CV</span>
+      <span></span>
     </a>
   </div>
     );

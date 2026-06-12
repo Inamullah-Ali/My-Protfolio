@@ -86,10 +86,17 @@ export function Navbar() {
                 />
               </motion.a>
             ))}
-            <DownloadCV />
+            <div className="text-foreground/80 hover:text-primary transition-colors duration-300 flex-row flex items-center">
+              <span>
+                <DownloadCV />
+              </span>
+              Download CV
+            </div>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <DownloadCV />
+
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground hover:text-primary transition-colors p-2"
@@ -125,9 +132,6 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <div className="px-4 py-2">
-                <DownloadCV />
-              </div>
             </div>
           </motion.div>
         )}

@@ -1,7 +1,19 @@
 import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
 import { Button } from "./ui/button";
-import { ArrowRight, BadgePercent, Check, Github, LayoutDashboard, OctagonAlert, Search, ShieldCheck, SunMoon, TabletSmartphone, User } from "lucide-react";
+import {
+  ArrowRight,
+  BadgePercent,
+  Check,
+  Github,
+  LayoutDashboard,
+  OctagonAlert,
+  Search,
+  ShieldCheck,
+  SunMoon,
+  TabletSmartphone,
+  User,
+} from "lucide-react";
 import { useState } from "react";
 import type { ProjectType } from "@/types/project";
 import { ProjectPreviewDialog } from "./projectpreviewdialogue";
@@ -21,7 +33,8 @@ const projects = [
       {
         icon: <LayoutDashboard size={24} color="green" />,
         title: "Admin Dashboard",
-        description: "Manage Products Customers and Sales with an intuitive dashboard.",
+        description:
+          "Manage Products Customers and Sales with an intuitive dashboard.",
       },
       {
         icon: <OctagonAlert size={24} color="green" />,
@@ -41,17 +54,20 @@ const projects = [
       {
         icon: <TabletSmartphone size={24} color="purple" />,
         title: "Responsive Design",
-        description: "Fully responsive interface for seamless use on any device.",
+        description:
+          "Fully responsive interface for seamless use on any device.",
       },
       {
         icon: <ShieldCheck size={24} color="purple" />,
         title: "Secure Checkout",
-        description: "Multiple payment options with secure processing for a smooth checkout experience.",
+        description:
+          "Multiple payment options with secure processing for a smooth checkout experience.",
       },
       {
         icon: <SunMoon size={24} color="purple" />,
         title: "Dark & Light Mode",
-        description: "Switch between dark and light themes based on your preference.",
+        description:
+          "Switch between dark and light themes based on your preference.",
       },
     ],
     screenshots: [
@@ -69,7 +85,16 @@ const projects = [
       "/images/ShopProject/shop-10.png",
       "/images/ShopProject/shop-11.png",
     ],
-    technologies: ["React","React Router","Lucide React" ,"TypeScript", "Firebase","Appwrite", "Tailwind", "shadcn/ui"],
+    technologies: [
+      "React",
+      "React Router",
+      "Lucide React",
+      "TypeScript",
+      "Firebase",
+      "Appwrite",
+      "Tailwind",
+      "shadcn/ui",
+    ],
     github: "https://github.com/Inamullah-Ali/ShopManagement",
     demo: "https://shop-management-kappa.vercel.app/",
     image: "/images/ShopProject/shop-1.png",

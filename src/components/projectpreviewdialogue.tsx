@@ -57,10 +57,12 @@ export function ProjectPreviewDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="w-[98vw] max-w-200 lg:max-w-200">
+      <DialogContent className="w-[98vw] max-w-200 lg:max-w-200 max-h-[90vh] overflow-y-auto p-4">
         <DialogHeader>
           <DialogTitle className="flex flex-row gap-2 items-center">
-            <h3 className="text-xl font-semibold text-popover-foreground">{project.name}</h3>
+            <h3 className="text-xl font-semibold text-popover-foreground">
+              {project.name}
+            </h3>
             <p
               className={`text-xs font-normal border px-2 py-0.5 rounded-md ${
                 project.status === "Live"
@@ -75,7 +77,6 @@ export function ProjectPreviewDialog({
           </DialogTitle>
         </DialogHeader>
 
-        {/* Tabs */}
         <div className="flex gap-6">
           <p
             onClick={() => setActiveTab("overview")}
@@ -99,35 +100,36 @@ export function ProjectPreviewDialog({
           </p>
         </div>
 
-        {/* Tab Content */}
         <div className="">
           {activeTab === "overview" && (
-            <div className="mt-4 space-y-5">
-              {/* Introduction + Image */}
+            <div className=" space-y-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-start">
-                {/* Left Content */}
                 <div className="space-y-2">
                   <p className="font-medium">Demo Access</p>
                   <div className="h-36 p-2 border border-border rounded-lg bg-card flex flex-col justify-center">
-                   <div className="px-2 py-1 flex flex-row justify-between">
-                   <p>Emial</p>
-                   <p>admin@gmail.com</p>
-                  </div>
-                  <div className="px-2 py-1 flex flex-row justify-between">
-                   <p>Password</p>
-                   <p>admin@123</p>
-                  </div>
-                  <div className="px-2 py-1 flex flex-row justify-between">
-                   <p>Role</p>
-                   <p>Shop Admin</p>
-                   </div>
-                   <div className="px-2 py-1 flex flex-row justify-between items-center border-t border-border mt-2">
-                   <p className="flex items-center gap-1"><AlertCircle size={16} />Note</p>
-                   <p className="text-xs text-muted-foreground">Only for demo purposes. Please do not misuse.</p>
-                   </div>
+                    <div className="px-2 py-1 flex flex-row justify-between">
+                      <p>Emial</p>
+                      <p>admin@gmail.com</p>
+                    </div>
+                    <div className="px-2 py-1 flex flex-row justify-between">
+                      <p>Password</p>
+                      <p>admin@123</p>
+                    </div>
+                    <div className="px-2 py-1 flex flex-row justify-between">
+                      <p>Role</p>
+                      <p>Shop Admin</p>
+                    </div>
+                    <div className="px-2 py-1 flex flex-row justify-between items-center border-t border-border mt-2">
+                      <p className="flex items-center gap-1 w-16">
+                        <AlertCircle size={16} />
+                        Note
+                      </p>
+                      <p className="text-xs text-muted-foreground text-end">
+                        Only for demo purposes. Please do not misuse.
+                      </p>
+                    </div>
                   </div>
 
-                  {/* Project Details */}
                   <p className="">Project Details</p>
                   <div className="grid grid-cols-3 gap-1">
                     <div className="border border-border rounded-lg bg-card p-2">
@@ -168,9 +170,7 @@ export function ProjectPreviewDialog({
                     </div>
                   </div>
                 </div>
-
-                {/* Right Image */}
-                <div className="flex justify-center">
+                <div className="sm:flex justify-center hidden ">
                   <img
                     src={project.image}
                     alt={project.name}
@@ -178,7 +178,6 @@ export function ProjectPreviewDialog({
                   />
                 </div>
               </div>
-              {/* Tech Stack */}
               <div>
                 <p className="font-semibold mb-2">Tech Stack</p>
 
@@ -205,10 +204,8 @@ export function ProjectPreviewDialog({
           )}
 
           {activeTab === "screenshots" && (
-            <div className="flex flex-col gap-3">
-              {/* Main Image */}
+            <div className="flex flex-col gap-2">
               <div className="relative">
-                {/* Main Image */}
                 <img
                   src={project.screenshots[selectedIndex]}
                   alt="main screenshot"
@@ -221,8 +218,8 @@ export function ProjectPreviewDialog({
                     setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev))
                   }
                   className="absolute left-3 top-1/2 -translate-y-1/2 
-    bg-popover/70 hover:bg-popover/80 text-popover-foreground 
-    p-2 rounded-full cursor-pointer"
+                  bg-popover/70 hover:bg-popover/80 text-popover-foreground 
+                  p-2 rounded-full cursor-pointer"
                 >
                   <ChevronLeft size={22} />
                 </button>
@@ -235,21 +232,20 @@ export function ProjectPreviewDialog({
                     )
                   }
                   className="absolute right-3 top-1/2 -translate-y-1/2 
-    bg-popover/70 hover:bg-popover/80 text-popover-foreground 
-    p-2 rounded-full cursor-pointer"
+                  bg-popover/70 hover:bg-popover/80 text-popover-foreground 
+                  p-2 rounded-full cursor-pointer"
                 >
                   <ChevronRight size={22} />
                 </button>
               </div>
 
-              {/* Gallery */}
               <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
                 {project.screenshots.map((img, index) => (
                   <img
                     key={index}
                     src={img}
                     onClick={() => setSelectedIndex(index)}
-                    className={`h-28 min-w-[calc((100%-24px)/4)] rounded-md border object-cover cursor-pointer ${
+                    className={`h-28 min-w-[calc((100%-12px)/2)] sm:min-w-[calc((100%-24px)/4)] rounded-md border object-cover cursor-pointer ${
                       selectedIndex === index
                         ? "border-purple-500 border-2"
                         : ""
@@ -260,33 +256,30 @@ export function ProjectPreviewDialog({
             </div>
           )}
 
-{activeTab === "features" && (
-  <div className="grid md:grid-cols-2 gap-3 mt-3">
-    {project.features.map((feature) => (
-      <div
-        key={feature.title}
-        className="border rounded-lg p-4 bg-muted/20 flex items-center gap-3"
-      >
-        {/* Icon */}
-        <div className="h-10 w-10 rounded-lg flex items-center justify-center shrink-0 bg-muted-foreground/10">
-          {feature.icon}
-        </div>
+          {activeTab === "features" && (
+            <div className="grid md:grid-cols-2 gap-3 mt-3">
+              {project.features.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="border rounded-lg p-4 bg-muted/20 flex items-center gap-3"
+                >
+                  {/* Icon */}
+                  <div className="h-10 w-10 rounded-lg flex items-center justify-center shrink-0 bg-muted-foreground/10">
+                    {feature.icon}
+                  </div>
 
-        {/* Text */}
-        <div>
-          <h4 className="font-semibold">
-            {feature.title}
-          </h4>
+                  {/* Text */}
+                  <div>
+                    <h4 className="font-semibold">{feature.title}</h4>
 
-          <p className="text-sm text-muted-foreground mt-1">
-            {feature.description}
-          </p>
-        </div>
-
-      </div>
-    ))}
-  </div>
-)}
+                    <p className="text-sm text-muted-foreground mt-1">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="flex gap-2 justify-end">
