@@ -88,9 +88,8 @@ export function Navbar() {
             ))}
             <div className="text-foreground/80 hover:text-primary transition-colors duration-300 flex-row flex items-center">
               <span>
-                <DownloadCV />
+                <DownloadCV title="Download CV" />
               </span>
-              Download CV
             </div>
           </div>
 
