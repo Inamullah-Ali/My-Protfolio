@@ -355,7 +355,6 @@ export function ProjectPreviewDialog({
         </DialogContent>
       </Dialog>
 
-      {/* Mobile App Demo Dialog */}
       <Dialog open={showMobileDialog} onOpenChange={setShowMobileDialog}>
         <DialogContent className="max-w-sm p-6 text-center">
           <DialogHeader>
@@ -382,7 +381,7 @@ export function ProjectPreviewDialog({
             )}
             {project.demo && (
               <Button asChild className="w-full">
-                <a href="https://drive.google.com/file/d/1UdnaZO4P_jcNCmpe8SDWrRkBg166-rrJ/view?usp=drive_link" download>
+                <a href="https://drive.google.com/file/d/1Wre8y4lWwhbYsh8OPkTYIKJzx-tZvTVQ/view?usp=sharing" download>
                   Download
                   <SquareArrowOutUpRight size={16} className="ml-1" />
                 </a>
