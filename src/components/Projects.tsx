@@ -126,77 +126,77 @@ const projects = [
     purpose:
       "To provide small businesses with an easy-to-use inventory and sales management solution.",
     role: "Full Stack Developer",
-    email:"admin@gmail.com",
-    password:"Admin@123",
-    loginrole:"Shop Admin"
+    email: "admin@gmail.com",
+    password: "Admin@123",
+    loginrole: "Shop Admin",
   },
   {
     name: "HR Management APP",
     status: "Live",
     description:
       "An employee management application designed to streamline attendance, tasks, leave requests, expense approvals, and workplace communication through dedicated employee and admin portals.",
-features: [
-  {
-    icon: <User size={24} className="text-primary" />,
-    title: "Employee Authentication",
-    description:
-      "Secure login system with role-based access for employees and administrators.",
-  },
-  {
-    icon: <LayoutDashboard size={24} className="text-primary" />,
-    title: "Admin Dashboard",
-    description:
-      "Manage employees, monitor activities, and handle company operations from a centralized dashboard.",
-  },
-  {
-    icon: <Clock size={24} className="text-primary" />,
-    title: "Attendance Tracking",
-    description:
-      "Employees can clock in, clock out, and manage break times with accurate attendance records.",
-  },
-  {
-    icon: <ClipboardList size={24} className="text-primary" />,
-    title: "Task Management",
-    description:
-      "Assign tasks to employees and track their responsibilities efficiently.",
-  },
-  {
-    icon: <Bell size={24} className="text-primary" />,
-    title: "Meeting Notifications",
-    description:
-      "Receive instant notifications for upcoming meetings and important updates.",
-  },
-  {
-    icon: <FileText size={24} className="text-primary" />,
-    title: "Leave Management",
-    description:
-      "Submit leave requests directly from the app with admin approval workflows.",
-  },
-  {
-    icon: <Receipt size={24} className="text-primary" />,
-    title: "Expense Management",
-    description:
-      "Employees can submit business expenses while admins review and approve requests.",
-  },
-  {
-    icon: <CheckCircle size={24} className="text-primary" />,
-    title: "Approval Workflow",
-    description:
-      "Streamlined approval and rejection process for leave and expense requests.",
-  },
-  {
-    icon: <Users size={24} className="text-primary" />,
-    title: "Employee Management",
-    description:
-      "Create employee accounts and manage workforce information with ease.",
-  },
-  {
-    icon: <TabletSmartphone size={24} className="text-primary" />,
-    title: "Mobile Friendly",
-    description:
-      "Optimized for mobile devices to ensure productivity from anywhere.",
-  },
-],
+    features: [
+      {
+        icon: <User size={24} className="text-primary" />,
+        title: "Employee Authentication",
+        description:
+          "Secure login system with role-based access for employees and administrators.",
+      },
+      {
+        icon: <LayoutDashboard size={24} className="text-primary" />,
+        title: "Admin Dashboard",
+        description:
+          "Manage employees, monitor activities, and handle company operations from a centralized dashboard.",
+      },
+      {
+        icon: <Clock size={24} className="text-primary" />,
+        title: "Attendance Tracking",
+        description:
+          "Employees can clock in, clock out, and manage break times with accurate attendance records.",
+      },
+      {
+        icon: <ClipboardList size={24} className="text-primary" />,
+        title: "Task Management",
+        description:
+          "Assign tasks to employees and track their responsibilities efficiently.",
+      },
+      {
+        icon: <Bell size={24} className="text-primary" />,
+        title: "Meeting Notifications",
+        description:
+          "Receive instant notifications for upcoming meetings and important updates.",
+      },
+      {
+        icon: <FileText size={24} className="text-primary" />,
+        title: "Leave Management",
+        description:
+          "Submit leave requests directly from the app with admin approval workflows.",
+      },
+      {
+        icon: <Receipt size={24} className="text-primary" />,
+        title: "Expense Management",
+        description:
+          "Employees can submit business expenses while admins review and approve requests.",
+      },
+      {
+        icon: <CheckCircle size={24} className="text-primary" />,
+        title: "Approval Workflow",
+        description:
+          "Streamlined approval and rejection process for leave and expense requests.",
+      },
+      {
+        icon: <Users size={24} className="text-primary" />,
+        title: "Employee Management",
+        description:
+          "Create employee accounts and manage workforce information with ease.",
+      },
+      {
+        icon: <TabletSmartphone size={24} className="text-primary" />,
+        title: "Mobile Friendly",
+        description:
+          "Optimized for mobile devices to ensure productivity from anywhere.",
+      },
+    ],
     screenshots: [
       "/images/App_HRMS/login.jpeg",
       "/images/App_HRMS/attendent.jpeg",
@@ -225,9 +225,10 @@ features: [
     purpose:
       "The purpose of this project is to digitize and automate daily employee management processes, reducing manual work and improving communication between employees and administrators.",
     role: "Full Stack Developer",
-    email:"employee@gmail.com",
-    password:"Employee@123",
-    loginrole:"Employee",
+    email: "employee@gmail.com",
+    password: "Employee@123",
+    loginrole: "Employee",
+    qrCode: "/images/App_HRMS/qrcode.png",
   },
 ];
 
@@ -281,7 +282,7 @@ export function Projects() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className={`relative overflow-hidden rounded-xl border bg-card text-card-foreground shadow-2xl shadow-slate-900/10 transition-all duration-300 ${
+                className={`relative overflow-hidden rounded-xl border bg-card text-card-foreground shadow-2xl shadow-slate-900/10 transition-all duration-300 flex flex-col ${
                   selectedProject?.name === project.name
                     ? "border-purple-500 border-2 shadow-purple-500/30"
                     : "border-border"
@@ -306,7 +307,7 @@ export function Projects() {
                   </span>
                 </div>
 
-                <div className="py-2 px-6">
+                <div className="py-2 px-6 flex flex-col flex-1 pb-6">
                   <div className="flex flex-wrap items-start justify-between gap-2">
                     <div>
                       <div className=" flex flex-row gap-2 items-center">
@@ -357,7 +358,7 @@ export function Projects() {
                     ))}
                   </div>
 
-                  <div className="mt-8 flex gap-3">
+                  <div className="mt-auto flex gap-3 pt-8">
                     <Button
                       asChild
                       className="flex-1 h-10 bg-gray-800 text-white hover:bg-gray-700"

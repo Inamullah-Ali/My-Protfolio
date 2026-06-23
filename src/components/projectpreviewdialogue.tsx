@@ -382,7 +382,7 @@ export function ProjectPreviewDialog({
             )}
             {project.demo && (
               <Button asChild className="w-full">
-                <a href="" download>
+                <a href="https://drive.google.com/file/d/1UdnaZO4P_jcNCmpe8SDWrRkBg166-rrJ/view?usp=drive_link" download>
                   Download
                   <SquareArrowOutUpRight size={16} className="ml-1" />
                 </a>
