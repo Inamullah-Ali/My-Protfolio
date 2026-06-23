@@ -66,6 +66,7 @@ export function ProjectPreviewDialog({
   if (!project) return null;
 
   return (
+<<<<<<< HEAD
     <>
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent className="w-[98vw] max-w-200 lg:max-w-200 max-h-[95vh] overflow-y-auto p-4">
@@ -89,6 +90,15 @@ export function ProjectPreviewDialog({
           </DialogHeader>
 
           <div className="flex gap-6">
+=======
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="w-[98vw] max-w-200 lg:max-w-200 max-h-[90vh] overflow-y-auto p-4">
+        <DialogHeader>
+          <DialogTitle className="flex flex-row gap-2 items-center">
+            <h3 className="text-xl font-semibold text-popover-foreground">
+              {project.name}
+            </h3>
+>>>>>>> 1a70df5d05243770672c3404db81a3363c1fb7a7
             <p
               onClick={() => setActiveTab("overview")}
               className={tabClass("overview")}
@@ -109,6 +119,7 @@ export function ProjectPreviewDialog({
             </p>
           </div>
 
+<<<<<<< HEAD
           <div>
             {activeTab === "overview" && (
               <div className="space-y-5">
@@ -246,6 +257,111 @@ export function ProjectPreviewDialog({
                 </div>
               </div>
             )}
+=======
+        <div className="flex gap-6">
+          <p
+            onClick={() => setActiveTab("overview")}
+            className={tabClass("overview")}
+          >
+            Overview
+          </p>
+
+          <p
+            onClick={() => setActiveTab("screenshots")}
+            className={tabClass("screenshots")}
+          >
+            Screenshots
+          </p>
+
+          <p
+            onClick={() => setActiveTab("features")}
+            className={tabClass("features")}
+          >
+            Features
+          </p>
+        </div>
+
+        <div className="">
+          {activeTab === "overview" && (
+            <div className=" space-y-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-start">
+                <div className="space-y-2">
+                  <p className="font-medium">Demo Access</p>
+                  <div className="h-36 p-2 border border-border rounded-lg bg-card flex flex-col justify-center">
+                    <div className="px-2 py-1 flex flex-row justify-between">
+                      <p>Emial</p>
+                      <p>admin@gmail.com</p>
+                    </div>
+                    <div className="px-2 py-1 flex flex-row justify-between">
+                      <p>Password</p>
+                      <p>admin@123</p>
+                    </div>
+                    <div className="px-2 py-1 flex flex-row justify-between">
+                      <p>Role</p>
+                      <p>Shop Admin</p>
+                    </div>
+                    <div className="px-2 py-1 flex flex-row justify-between items-center border-t border-border mt-2">
+                      <p className="flex items-center gap-1 w-16">
+                        <AlertCircle size={16} />
+                        Note
+                      </p>
+                      <p className="text-xs text-muted-foreground text-end">
+                        Only for demo purposes. Please do not misuse.
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="">Project Details</p>
+                  <div className="grid grid-cols-3 gap-1">
+                    <div className="border border-border rounded-lg bg-card p-2">
+                      <p className="text-xs text-muted-foreground">Status</p>
+                      <p
+                        className={`font-medium flex items-center gap-1 ${
+                          project.status === "Live"
+                            ? "text-green-500"
+                            : project.status === "In Progress"
+                              ? "text-red-500"
+                              : "text-blue-500"
+                        }`}
+                      >
+                        <Circle size={12} fill="currentColor" />
+                        {project.status}
+                      </p>
+                    </div>
+
+                    <div className="border border-border rounded-lg bg-card p-2">
+                      <p className="text-xs text-muted-foreground">Type</p>
+                      <p className="font-medium">{project.type}</p>
+                    </div>
+                    <div className="border border-border rounded-lg bg-card py-2 pl-1">
+                      <p className="text-xs text-muted-foreground">Role</p>
+                      <p className="text-xs">{project.role}</p>
+                    </div>
+                    <div className="border rounded-lg p-2">
+                      <p className="text-xs text-muted-foreground">Created</p>
+                      <p className="font-medium">{project.createdAt}</p>
+                    </div>
+                    <div className="border rounded-lg p-2">
+                      <p className="text-xs text-muted-foreground">Updated</p>
+                      <p className="font-medium">{project.lastUpdated}</p>
+                    </div>
+                    <div className="border rounded-lg p-2">
+                      <p className="text-xs text-muted-foreground">Duration</p>
+                      <p className="font-medium">{project.duration}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="sm:flex justify-center hidden ">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full rounded-lg border border-border object-cover"
+                  />
+                </div>
+              </div>
+              <div>
+                <p className="font-semibold mb-2">Tech Stack</p>
+>>>>>>> 1a70df5d05243770672c3404db81a3363c1fb7a7
 
             {activeTab === "screenshots" && (
               <div className="flex flex-col gap-2">
@@ -292,6 +408,7 @@ export function ProjectPreviewDialog({
               </div>
             )}
 
+<<<<<<< HEAD
             {activeTab === "features" && (
               <div className="grid md:grid-cols-2 gap-3 mt-3">
                 {project.features.map((feature) => (
@@ -309,11 +426,62 @@ export function ProjectPreviewDialog({
                       </p>
                     </div>
                   </div>
+=======
+          {activeTab === "screenshots" && (
+            <div className="flex flex-col gap-2">
+              <div className="relative">
+                <img
+                  src={project.screenshots[selectedIndex]}
+                  alt="main screenshot"
+                  className="w-full h-full rounded-lg border object-cover"
+                />
+
+                {/* Left Arrow */}
+                <button
+                  onClick={() =>
+                    setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev))
+                  }
+                  className="absolute left-3 top-1/2 -translate-y-1/2 
+                  bg-popover/70 hover:bg-popover/80 text-popover-foreground 
+                  p-2 rounded-full cursor-pointer"
+                >
+                  <ChevronLeft size={22} />
+                </button>
+
+                {/* Right Arrow */}
+                <button
+                  onClick={() =>
+                    setSelectedIndex((prev) =>
+                      prev < project.screenshots.length - 1 ? prev + 1 : prev,
+                    )
+                  }
+                  className="absolute right-3 top-1/2 -translate-y-1/2 
+                  bg-popover/70 hover:bg-popover/80 text-popover-foreground 
+                  p-2 rounded-full cursor-pointer"
+                >
+                  <ChevronRight size={22} />
+                </button>
+              </div>
+
+              <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+                {project.screenshots.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    onClick={() => setSelectedIndex(index)}
+                    className={`h-28 min-w-[calc((100%-12px)/2)] sm:min-w-[calc((100%-24px)/4)] rounded-md border object-cover cursor-pointer ${
+                      selectedIndex === index
+                        ? "border-purple-500 border-2"
+                        : ""
+                    }`}
+                  />
+>>>>>>> 1a70df5d05243770672c3404db81a3363c1fb7a7
                 ))}
               </div>
             )}
           </div>
 
+<<<<<<< HEAD
           <div className="flex gap-2 justify-end">
             {project.type === "Mobile App" ? (
               <Button
@@ -392,5 +560,55 @@ export function ProjectPreviewDialog({
         </DialogContent>
       </Dialog>
     </>
+=======
+          {activeTab === "features" && (
+            <div className="grid md:grid-cols-2 gap-3 mt-3">
+              {project.features.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="border rounded-lg p-4 bg-muted/20 flex items-center gap-3"
+                >
+                  {/* Icon */}
+                  <div className="h-10 w-10 rounded-lg flex items-center justify-center shrink-0 bg-muted-foreground/10">
+                    {feature.icon}
+                  </div>
+
+                  {/* Text */}
+                  <div>
+                    <h4 className="font-semibold">{feature.title}</h4>
+
+                    <p className="text-sm text-muted-foreground mt-1">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="flex gap-2 justify-end">
+          <Button
+            asChild
+            className="flex items-center gap-1 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md"
+          >
+            <a href={project.demo} target="_blank" rel="noopener noreferrer">
+              Live Demo
+              <SquareArrowOutUpRight size={16} />
+            </a>
+          </Button>
+
+          <Button
+            asChild
+            className="flex items-center rounded-md border border-border bg-card text-card-foreground hover:bg-muted"
+          >
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
+              Source Code <Github size={16} />
+            </a>
+          </Button>
+        </div>
+      </DialogContent>
+    </Dialog>
+>>>>>>> 1a70df5d05243770672c3404db81a3363c1fb7a7
   );
 }

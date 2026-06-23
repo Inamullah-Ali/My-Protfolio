@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import {
   ArrowRight,
   BadgePercent,
+<<<<<<< HEAD
   Bell,
   Check,
   CheckCircle,
@@ -15,13 +16,22 @@ import {
   LayoutDashboard,
   OctagonAlert,
   Receipt,
+=======
+  Check,
+  Github,
+  LayoutDashboard,
+  OctagonAlert,
+>>>>>>> 1a70df5d05243770672c3404db81a3363c1fb7a7
   Search,
   ShieldCheck,
   SunMoon,
   TabletSmartphone,
   User,
+<<<<<<< HEAD
   Users,
   WifiOff,
+=======
+>>>>>>> 1a70df5d05243770672c3404db81a3363c1fb7a7
 } from "lucide-react";
 import { useState } from "react";
 import type { ProjectType } from "@/types/project";
@@ -43,7 +53,11 @@ const projects = [
         icon: <LayoutDashboard size={24} className="text-primary" />,
         title: "Admin Dashboard",
         description:
+<<<<<<< HEAD
           "Manage Products, Customers and Sales with an intuitive dashboard.",
+=======
+          "Manage Products Customers and Sales with an intuitive dashboard.",
+>>>>>>> 1a70df5d05243770672c3404db81a3363c1fb7a7
       },
       {
         icon: <WifiOff size={24} className="text-primary" />,
