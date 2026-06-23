@@ -34,7 +34,7 @@ export function Hero() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-muted-foreground mb-6"
             >
-              Full Stack Developer
+             Full-Stack Web & Mobile Developer
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -42,8 +42,7 @@ export function Hero() {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="text-muted-foreground mb-8 max-w-2xl"
             >
-              I craft beautiful, performant web applications with modern technologies.
-              Passionate about creating seamless user experiences and writing clean, maintainable code.
+             Motivated BSIT student with hands-on experience in modern web development technologies. Skilled in React, Next.js, TypeScript, Node.js, Express.js, MongoDB, and Firebase. Passionate about building scalable web applications, creating seamless user experiences, and developing efficient, maintainable solutions through clean code.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -53,7 +52,7 @@ export function Hero() {
             >
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl dark:shadow-[0_10px_30px_rgba(124,58,237,0.4)] dark:hover:shadow-[0_15px_40px_rgba(124,58,237,0.6)]"
+                className="inline-flex items-center gap-2 px-4 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl dark:shadow-[0_10px_30px_rgba(124,58,237,0.4)] dark:hover:shadow-[0_15px_40px_rgba(124,58,237,0.6)]"
               >
                 View Projects
                 <ArrowRight className="w-4 h-4" />
@@ -78,9 +77,7 @@ export function Hero() {
               <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-accent/20 rounded-full blur-2xl dark:from-primary/30 dark:to-primary/10"></div>
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-border bg-muted dark:border-primary/30 dark:shadow-[0_0_60px_rgba(124,58,237,0.3)]">
                 <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  {/* <svg className="w-32 h-32" fill="currentColor" viewBox="0 0 20 20">
-                  </svg> */}
-                  <img src="/images/me.jpg" alt="pic"  />
+                  <img src="/images/me.png" alt="pic"  />
                 </div>
               </div>
             </div>

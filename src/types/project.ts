@@ -14,10 +14,14 @@ export type ProjectType = {
   github: string;
   demo: string;
   image: string;
-  type: string;
+  type?: string;
   createdAt: string;
   lastUpdated: string;
   duration: string;
   purpose: string;
   role: string;
+  email?:string;
+  loginrole?:string;
+  password?:string;
+  qrCode?:string;
 }

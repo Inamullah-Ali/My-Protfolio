@@ -1,7 +1,28 @@
 import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
 import { Button } from "./ui/button";
-import { ArrowRight, BadgePercent, Check, Github, LayoutDashboard, OctagonAlert, Search, ShieldCheck, SunMoon, TabletSmartphone, User } from "lucide-react";
+import {
+  ArrowRight,
+  BadgePercent,
+  Bell,
+  Check,
+  CheckCircle,
+  ClipboardList,
+  Clock,
+  FileText,
+  Github,
+  Globe,
+  LayoutDashboard,
+  OctagonAlert,
+  Receipt,
+  Search,
+  ShieldCheck,
+  SunMoon,
+  TabletSmartphone,
+  User,
+  Users,
+  WifiOff,
+} from "lucide-react";
 import { useState } from "react";
 import type { ProjectType } from "@/types/project";
 import { ProjectPreviewDialog } from "./projectpreviewdialogue";
@@ -14,44 +35,60 @@ const projects = [
       "Inventory, sales, and expense dashboard with role-based access and real-time updates.",
     features: [
       {
-        icon: <User size={24} color="red" />,
+        icon: <User size={24} className="text-primary" />,
         title: "User Authentication",
-        description: "Secure Sign-up , Login and Profile Management.",
+        description: "Secure Sign-up, Login and Profile Management.",
       },
       {
-        icon: <LayoutDashboard size={24} color="green" />,
+        icon: <LayoutDashboard size={24} className="text-primary" />,
         title: "Admin Dashboard",
-        description: "Manage Products Customers and Sales with an intuitive dashboard.",
+        description:
+          "Manage Products, Customers and Sales with an intuitive dashboard.",
       },
       {
-        icon: <OctagonAlert size={24} color="green" />,
+        icon: <WifiOff size={24} className="text-primary" />,
+        title: "Offline & Online Mode",
+        description:
+          "Use the app seamlessly without internet — data syncs automatically when you're back online.",
+      },
+      {
+        icon: <Globe size={24} className="text-primary" />,
+        title: "Web & Mobile App",
+        description:
+          "Available as both a web platform and mobile app for a consistent experience across all your devices.",
+      },
+      {
+        icon: <OctagonAlert size={24} className="text-primary" />,
         title: "Low Stock Alerts",
         description: "Automatically notify when products are running low.",
       },
       {
-        icon: <BadgePercent size={24} color="purple" />,
+        icon: <BadgePercent size={24} className="text-primary" />,
         title: "Sales & Expense Analytics",
         description: "Track business performance with detailed analytics.",
       },
       {
-        icon: <Search size={24} color="purple" />,
+        icon: <Search size={24} className="text-primary" />,
         title: "Product Browsing & Search",
         description: "Browse and search products with ease using filters.",
       },
       {
-        icon: <TabletSmartphone size={24} color="purple" />,
+        icon: <TabletSmartphone size={24} className="text-primary" />,
         title: "Responsive Design",
-        description: "Fully responsive interface for seamless use on any device.",
+        description:
+          "Fully responsive interface for seamless use on any device.",
       },
       {
-        icon: <ShieldCheck size={24} color="purple" />,
+        icon: <ShieldCheck size={24} className="text-primary" />,
         title: "Secure Checkout",
-        description: "Multiple payment options with secure processing for a smooth checkout experience.",
+        description:
+          "Multiple payment options with secure processing for a smooth checkout experience.",
       },
       {
-        icon: <SunMoon size={24} color="purple" />,
+        icon: <SunMoon size={24} className="text-primary" />,
         title: "Dark & Light Mode",
-        description: "Switch between dark and light themes based on your preference.",
+        description:
+          "Switch between dark and light themes based on your preference.",
       },
     ],
     screenshots: [
@@ -69,17 +106,128 @@ const projects = [
       "/images/ShopProject/shop-10.png",
       "/images/ShopProject/shop-11.png",
     ],
-    technologies: ["React","React Router","Lucide React" ,"TypeScript", "Firebase","Appwrite", "Tailwind", "shadcn/ui"],
+    technologies: [
+      "React",
+      "React Router",
+      "Lucide React",
+      "TypeScript",
+      "Firebase",
+      "Appwrite",
+      "Tailwind",
+      "shadcn/ui",
+    ],
     github: "https://github.com/Inamullah-Ali/ShopManagement",
     demo: "https://shop-management-kappa.vercel.app/",
     image: "/images/ShopProject/shop-1.png",
-    type: "web",
+    type: "web App",
     createdAt: "2026-06-07",
     lastUpdated: "2026-06-08",
-    duration: "6 months",
+    duration: "1.5 months",
     purpose:
       "To provide small businesses with an easy-to-use inventory and sales management solution.",
     role: "Full Stack Developer",
+    email:"admin@gmail.com",
+    password:"Admin@123",
+    loginrole:"Shop Admin"
+  },
+  {
+    name: "HR Management APP",
+    status: "Live",
+    description:
+      "An employee management application designed to streamline attendance, tasks, leave requests, expense approvals, and workplace communication through dedicated employee and admin portals.",
+features: [
+  {
+    icon: <User size={24} className="text-primary" />,
+    title: "Employee Authentication",
+    description:
+      "Secure login system with role-based access for employees and administrators.",
+  },
+  {
+    icon: <LayoutDashboard size={24} className="text-primary" />,
+    title: "Admin Dashboard",
+    description:
+      "Manage employees, monitor activities, and handle company operations from a centralized dashboard.",
+  },
+  {
+    icon: <Clock size={24} className="text-primary" />,
+    title: "Attendance Tracking",
+    description:
+      "Employees can clock in, clock out, and manage break times with accurate attendance records.",
+  },
+  {
+    icon: <ClipboardList size={24} className="text-primary" />,
+    title: "Task Management",
+    description:
+      "Assign tasks to employees and track their responsibilities efficiently.",
+  },
+  {
+    icon: <Bell size={24} className="text-primary" />,
+    title: "Meeting Notifications",
+    description:
+      "Receive instant notifications for upcoming meetings and important updates.",
+  },
+  {
+    icon: <FileText size={24} className="text-primary" />,
+    title: "Leave Management",
+    description:
+      "Submit leave requests directly from the app with admin approval workflows.",
+  },
+  {
+    icon: <Receipt size={24} className="text-primary" />,
+    title: "Expense Management",
+    description:
+      "Employees can submit business expenses while admins review and approve requests.",
+  },
+  {
+    icon: <CheckCircle size={24} className="text-primary" />,
+    title: "Approval Workflow",
+    description:
+      "Streamlined approval and rejection process for leave and expense requests.",
+  },
+  {
+    icon: <Users size={24} className="text-primary" />,
+    title: "Employee Management",
+    description:
+      "Create employee accounts and manage workforce information with ease.",
+  },
+  {
+    icon: <TabletSmartphone size={24} className="text-primary" />,
+    title: "Mobile Friendly",
+    description:
+      "Optimized for mobile devices to ensure productivity from anywhere.",
+  },
+],
+    screenshots: [
+      "/images/App_HRMS/login.jpeg",
+      "/images/App_HRMS/attendent.jpeg",
+      "/images/App_HRMS/task.jpeg",
+      "/images/App_HRMS/expense.jpeg",
+      "/images/App_HRMS/leave.jpeg",
+      "/images/App_HRMS/profile.jpeg",
+    ],
+    technologies: [
+      "Expo (Go)",
+      "React Native",
+      "Expo Router",
+      "Lucide React",
+      "TypeScript",
+      "Firebase",
+      "Appwrite",
+      "NativeWind CSS",
+    ],
+    github: "https://github.com/Inamullah-Ali/HRMS-Mobile-App",
+    demo: "https://shop-management-kappa.vercel.app/",
+    image: "/images/App_HRMS/login.jpeg",
+    type: "Mobile App",
+    createdAt: "2026-06-07",
+    lastUpdated: "2026-06-08",
+    duration: "2 months",
+    purpose:
+      "The purpose of this project is to digitize and automate daily employee management processes, reducing manual work and improving communication between employees and administrators.",
+    role: "Full Stack Developer",
+    email:"employee@gmail.com",
+    password:"Employee@123",
+    loginrole:"Employee",
   },
 ];
 
