@@ -5,6 +5,9 @@ import {
   ArrowRight,
   BadgePercent,
   Bell,
+  Building2,
+  CalendarCheck,
+  CalendarClock,
   Check,
   CheckCircle,
   ClipboardList,
@@ -13,6 +16,7 @@ import {
   Github,
   Globe,
   LayoutDashboard,
+  ListTodo,
   OctagonAlert,
   Receipt,
   Search,
@@ -21,6 +25,7 @@ import {
   TabletSmartphone,
   User,
   Users,
+  Wallet,
   WifiOff,
 } from "lucide-react";
 import { useState } from "react";
@@ -229,6 +234,110 @@ const projects = [
     password: "Employee@123",
     loginrole: "Employee",
     qrCode: "/images/App_HRMS/qrcode.png",
+  },
+  {
+    name: "HRMS Admin Pannel",
+    status: "Live (In Progress)",
+    description:
+      "A Human Resource Management System (HRMS) admin dashboard for managing employees, attendance, departments, shifts, leaves, tasks, meetings, notices, and expenses with role-based access and real-time data management.",
+    features: [
+      {
+        icon: <User size={24} className="text-primary" />,
+        title: "Authentication & Role Management",
+        description:
+          "Secure login with role-based access control for administrators and employees.",
+      },
+      {
+        icon: <LayoutDashboard size={24} className="text-primary" />,
+        title: "Dashboard Analytics",
+        description:
+          "View employee statistics, attendance, leave summaries, and key HR insights.",
+      },
+      {
+        icon: <Users size={24} className="text-primary" />,
+        title: "Employee Management",
+        description:
+          "Add, update, delete, and manage employee profiles and records.",
+      },
+      {
+        icon: <Building2 size={24} className="text-primary" />,
+        title: "Departments & Shifts",
+        description:
+          "Manage company departments, work shifts, and employee assignments.",
+      },
+      {
+        icon: <CalendarCheck size={24} className="text-primary" />,
+        title: "Attendance Tracking",
+        description:
+          "Monitor daily attendance with real-time records and reports.",
+      },
+      {
+        icon: <CalendarClock size={24} className="text-primary" />,
+        title: "Leave Management",
+        description:
+          "Manage leave requests, leave categories, and approval workflow.",
+      },
+      {
+        icon: <ListTodo size={24} className="text-primary" />,
+        title: "Task Management",
+        description: "Assign tasks to employees and monitor their progress.",
+      },
+      {
+        icon: <Wallet size={24} className="text-primary" />,
+        title: "Expense Management",
+        description: "Track company expenses with categorized expense records.",
+      },
+      {
+        icon: <Bell size={24} className="text-primary" />,
+        title: "Notice Board",
+        description: "Publish and manage company announcements for employees.",
+      },
+      {
+        icon: <TabletSmartphone size={24} className="text-primary" />,
+        title: "Responsive Design",
+        description:
+          "Optimized for desktop, tablet, and mobile devices with dark and light themes.",
+      },
+    ],
+    screenshots: [
+      "/images/HRMS_AdminPannel/login.png",
+      "/images/HRMS_AdminPannel/dashboard.png",
+      "/images/HRMS_AdminPannel/department.png",
+      "/images/HRMS_AdminPannel/employee.png",
+      "/images/HRMS_AdminPannel/attendance.png",
+      "/images/HRMS_AdminPannel/shift.png",
+      "/images/HRMS_AdminPannel/task.png",
+      "/images/HRMS_AdminPannel/expensecategorie.png",
+      "/images/HRMS_AdminPannel/expence.png",
+      "/images/HRMS_AdminPannel/leavecategorie.png",
+      "/images/HRMS_AdminPannel/leave.png",
+      "/images/HRMS_AdminPannel/meetings.png",
+      "/images/HRMS_AdminPannel/country.png",
+      "/images/HRMS_AdminPannel/noticeboard.png",
+    ],
+    technologies: [
+      "React",
+      "React Router",
+      "Lucide React",
+      "TypeScript",
+      "Firebase",
+      "Appwrite",
+      "Tailwind",
+      "shadcn/ui",
+    ],
+    github: "https://github.com/Inamullah-Ali/Admin-Pannel",
+    demo: "https://admin-pannel-311w.vercel.app/",
+    image: "/images/HRMS_AdminPannel/login.png",
+    type: "web",
+    createdAt: "2026-06-07",
+    lastUpdated: "2026-06-26",
+    duration: "Ongoing (Started May 2026)",
+    purpose:
+      "To simplify human resource management by providing a centralized platform for managing employees, attendance, departments, shifts, tasks, leaves, meetings, notices, and expenses.",
+    role: "Full Stack Developer",
+    email: "admin@gmail.com",
+    password: "Admin@123",
+    loginrole: "Shop Admin",
   },
 ];
 
