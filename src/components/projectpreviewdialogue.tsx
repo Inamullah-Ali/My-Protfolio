@@ -318,7 +318,7 @@ export function ProjectPreviewDialog({
             {project.type === "Mobile App" ? (
               <Button
                 onClick={() => setShowMobileDialog(true)}
-                className="flex items-center gap-1 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md"
+                className="flex items-center gap-1 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md cursor-pointer"
               >
                 Live Demo
                 <SmartphoneNfc size={16} />
@@ -381,7 +381,6 @@ export function ProjectPreviewDialog({
             )}
             {project.demo && (
               <Button asChild className="w-full">
-                {/* <a href="https://drive.google.com/file/d/1Wre8y4lWwhbYsh8OPkTYIKJzx-tZvTVQ/view?usp=sharing" download> */}
                 <a href={project.downloadlink} download>
                   Download
                   <SquareArrowOutUpRight size={16} className="ml-1" />
