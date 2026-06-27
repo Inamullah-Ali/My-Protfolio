@@ -24,4 +24,5 @@ export type ProjectType = {
   loginrole?:string;
   password?:string;
   qrCode?:string;
+  downloadlink?:string;
 }

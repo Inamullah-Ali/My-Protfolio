@@ -234,6 +234,7 @@ const projects = [
     password: "Employee@123",
     loginrole: "Employee",
     qrCode: "/images/App_HRMS/qrcode.png",
+    downloadlink:"https://github.com/Inamullah-Ali/HRMS-Mobile-App/releases/download/v1.0.0/HRMS.apk"
   },
   {
     name: "HRMS Admin Pannel",
