@@ -6,7 +6,7 @@ interface DownloadCVProps {
 
 export default function DownloadCV({ title }: DownloadCVProps) {
   return (
-    <div className="flex hover:border-b border-primary transition-colors duration-300">
+    <div className="flex  border-primary transition-colors duration-300">
       <a
         href="/AnamullahAli_CV.pdf"
         download

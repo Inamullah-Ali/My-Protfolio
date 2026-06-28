@@ -86,11 +86,6 @@ export function Navbar() {
                 />
               </motion.a>
             ))}
-            <div className="text-foreground/80 hover:text-primary transition-colors duration-300 flex-row flex items-center">
-              <span>
-                <DownloadCV title="Download CV" />
-              </span>
-            </div>
           </div>
 
           <div className="md:hidden flex items-center gap-2">

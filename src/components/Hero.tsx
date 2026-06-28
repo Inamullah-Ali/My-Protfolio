@@ -1,5 +1,6 @@
 import { ArrowRight, Download } from 'lucide-react';
 import { motion } from 'motion/react';
+import DownloadCV from './downloadcv';
 
 export function Hero() {
   return (
@@ -61,8 +62,7 @@ export function Hero() {
                 href="#contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-card border border-border rounded-lg hover:bg-accent transition-all duration-300 shadow-lg hover:shadow-xl dark:border-accent"
               >
-                Contact Me
-                <Download className="w-4 h-4" />
+                <DownloadCV title='Download CV' />
               </a>
             </motion.div>
           </motion.div>
