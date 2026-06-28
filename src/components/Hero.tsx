@@ -1,4 +1,4 @@
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight} from 'lucide-react';
 import { motion } from 'motion/react';
 import DownloadCV from './downloadcv';
 
